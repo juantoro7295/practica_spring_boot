@@ -1,6 +1,5 @@
 package co.sofka.practica.api.modelo;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

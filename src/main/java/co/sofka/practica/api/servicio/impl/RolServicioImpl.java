@@ -1,7 +1,6 @@
 package co.sofka.practica.api.servicio.impl;
 
 import co.sofka.practica.api.modelo.Rol;
-import co.sofka.practica.api.modelo.Usuario;
 import co.sofka.practica.api.repositorio.RolRepositorio;
 import co.sofka.practica.api.servicio.RolServicio;
 import org.springframework.beans.factory.annotation.Autowired;
