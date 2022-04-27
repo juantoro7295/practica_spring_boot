@@ -1,9 +1,6 @@
 package co.sofka.practica.api.servicio;
 
 import co.sofka.practica.api.modelo.Usuario;
-import co.sofka.practica.api.repositorio.UsuarioRepositorio;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import java.util.ArrayList;
 import java.util.Optional;
 
