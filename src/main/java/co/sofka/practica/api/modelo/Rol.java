@@ -1,5 +1,6 @@
 package co.sofka.practica.api.modelo;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,4 +18,7 @@ public class Rol {
 
     @Column(name = "rol")
     private String nombreRol;
+
+
+
 }

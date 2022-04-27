@@ -1,16 +1,20 @@
 package co.sofka.practica.api.modelo;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Usuario")
+@Table(name = "usuario")
 public class Usuario {
 
     @Id
@@ -22,5 +26,7 @@ public class Usuario {
     private String email;
     @Column(name = "prioridad")
     private Integer prioridad;
+
+
 
 }
