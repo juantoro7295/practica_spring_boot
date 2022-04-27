@@ -8,9 +8,13 @@ import java.util.Optional;
 public interface RolServicio {
 
     Rol guadarRol(Rol rol);
+
     ArrayList<Rol> listarRoles();
+
     Optional<Rol> obtenerRolPorId(Long id);
+
     Rol actualizarRol(Rol rol);
+
     void eliminarRol(Long id);
 
 }
