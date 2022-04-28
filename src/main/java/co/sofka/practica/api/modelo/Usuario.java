@@ -1,6 +1,6 @@
 package co.sofka.practica.api.modelo;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,17 +25,17 @@ public class Usuario {
     private String email;
     @Column(name = "prioridad")
     private Integer prioridad;
-
-    @ManyToMany(cascade = {
-            CascadeType.PERSIST,
-            CascadeType.MERGE
-    })
-    @JoinTable(
-            name = "usuarios_roles",
-            joinColumns = {@JoinColumn(name = "usuario_id")},
-            inverseJoinColumns = {@JoinColumn(name = "roles_id")}
+    
+    @OneToMany(
+            mappedBy = "usuario",
+            targetEntity = Rol.class,
+            fetch = FetchType.EAGER,
+            cascade = CascadeType.REMOVE
     )
+    @JsonManagedReference
     private List<Rol> roles;
+
+
 
 
 
