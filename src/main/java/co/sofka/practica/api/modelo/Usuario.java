@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -25,7 +24,7 @@ public class Usuario {
     private String email;
     @Column(name = "prioridad")
     private Integer prioridad;
-    
+
     @OneToMany(
             mappedBy = "usuario",
             targetEntity = Rol.class,
