@@ -32,7 +32,7 @@ public class RolServicioImpl implements RolServicio {
     @Override
     public Rol actualizarRol(Rol rol) {
         Rol existeRol = rolRepositorio.findById(rol.getId_rol()).orElse(null);
-        existeRol.setNombreRol(rol.getNombreRol());
+        existeRol.setNombre(rol.getNombre());
         return rolRepositorio.save(existeRol);
     }
 

@@ -1,5 +1,6 @@
 package co.sofka.practica.api.modelo;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,12 +18,17 @@ public class Rol {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_rol;
 
-    @Column(name = "rol")
-    private String nombreRol;
+    @Column(name = "nombre")
+    private String nombre;
 
-    @ManyToMany(mappedBy = "roles")
-     private List<Usuario> usuarios;
-
+    @ManyToOne(
+            targetEntity = Usuario.class,
+            fetch = FetchType.LAZY,
+            optional = false
+    )
+    @JoinColumn(name = "id_usuario")
+    @JsonBackReference
+    private Usuario usuario;
 
 
 
